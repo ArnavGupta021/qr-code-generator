@@ -14,6 +14,7 @@ app = FastAPI()
 
 # Configure CORS to allow requests from your React frontend
 origins = [
+    "https://qr-gen-ten-ebon.vercel.app",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:5173",
