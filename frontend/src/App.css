@@ -1,0 +1,132 @@
+
+          /* General Styling */
+          .app-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+            background-color: #f3f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+              sans-serif;
+          }
+          
+          /* Card Styling */
+          .card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 28rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            text-align: center;
+          }
+          
+          .title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1f2937;
+          }
+          
+          .subtitle {
+            color: #6b7280;
+            margin: 0;
+          }
+          
+          /* Input and Button Styling */
+          .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+          }
+          
+          @media (min-width: 640px) {
+            .input-group {
+              flex-direction: row;
+            }
+          }
+          
+          .input-field {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1d5db;
+            outline: none;
+            transition: box-shadow 0.2s;
+          }
+          
+          .input-field:focus {
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+          }
+          
+          .generate-button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .generate-button:hover {
+            background-color: #2563eb;
+          }
+          
+          .generate-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+          }
+          
+          /* Error and QR Output Styling */
+          .error-message {
+            background-color: #fee2e2;
+            color: #ef4444;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            border: 1px solid #fca5a5;
+          }
+          
+          .qr-output {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+          }
+          
+          .qr-image-container {
+            background-color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px dashed #e5e7eb;
+          }
+          
+          .qr-image {
+            width: 16rem;
+            height: 16rem;
+            border-radius: 0.5rem;
+          }
+          
+          .download-button {
+            background-color: #22c55e;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .download-button:hover {
+            background-color: #16a34a;
+          }
+        
