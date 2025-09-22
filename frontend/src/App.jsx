@@ -3,7 +3,7 @@ import './App.css'
 
 const ENV = import.meta.env.VITE_ENV;
 const APIURL = ENV === 'DEV' ? import.meta.env.VITE_DEV_URL : import.meta.env.VITE_PROD_URL; 
-
+console.log(APIURL)
 const App = () => {
   const [data, setData] = useState('');
   const [qrCode, setQrCode] = useState(null);

@@ -8,14 +8,12 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
 PORT = os.getenv('PORT')
 
 app = FastAPI()
 
 # Configure CORS to allow requests from your React frontend
 origins = [
-    "https://qr-code-generator-fg0vyw4oz-arnav-guptas-projects-eed06418.vercel.app/"
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:5173",
