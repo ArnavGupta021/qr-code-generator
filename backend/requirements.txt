@@ -3,3 +3,4 @@ uvicorn
 qrcode
 python-dotenv
 pillow
+python-multipart 
