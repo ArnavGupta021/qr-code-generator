@@ -4,6 +4,12 @@ from fastapi import FastAPI, Form
 from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
 import qrcode
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PORT = os.getenv('PORT')
 
 app = FastAPI()
 
@@ -53,4 +59,4 @@ async def generate_qr_code(text_data: str = Form(...)):
         return Response(content=f"Error generating QR code: {str(e)}", status_code=500)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
