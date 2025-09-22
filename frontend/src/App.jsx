@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css'  
 
+const ENV = import.meta.env.VITE_ENV;
+const APIURL = ENV === 'DEV' ? import.meta.env.VITE_DEV_URL : import.meta.env.VITE_PROD_URL; 
+
 const App = () => {
   const [data, setData] = useState('');
   const [qrCode, setQrCode] = useState(null);
@@ -16,7 +19,7 @@ const App = () => {
     formData.append('text_data', data);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/generate_qr_code', {
+      const response = await fetch(`${APIURL}/generate_qr_code`, {
         method: 'POST',
         body: formData,
       });
@@ -26,7 +29,10 @@ const App = () => {
       }
 
       const blob = await response.blob();
+      // console.log(blob)
       const imageUrl = URL.createObjectURL(blob);
+      // console.log(imageUrl)
+
       setQrCode(imageUrl);
 
     } catch (error) {

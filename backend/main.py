@@ -57,6 +57,3 @@ async def generate_qr_code(text_data: str = Form(...)):
 
     except Exception as e:
         return Response(content=f"Error generating QR code: {str(e)}", status_code=500)
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
